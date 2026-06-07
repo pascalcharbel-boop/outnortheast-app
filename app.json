@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Out North East",
+    "slug": "outnortheast",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": { "backgroundColor": "#1A1140" },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": { "UIBackgroundModes": ["audio"] },
+      "bundleIdentifier": "org.outnortheast.app"
+    },
+    "android": {
+      "package": "org.outnortheast.app",
+      "permissions": ["FOREGROUND_SERVICE"]
+    },
+    "plugins": ["expo-notifications"]
+  }
+}
