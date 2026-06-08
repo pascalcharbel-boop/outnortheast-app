@@ -5,7 +5,7 @@ export const RADIO = {
   name: 'Pride Radio',
   tagline: 'Real voices. Real community.',
   // Replace with the real Pride Radio stream URL when available:
-  streamUrl: 'https://stream.example.com/prideradio',
+  streamUrl: process.env.EXPO_PUBLIC_RADIO_STREAM_URL || 'https://prideradio.co.uk/new_radio_player/console/',
   fm: '89.2FM / DAB',
 };
 
