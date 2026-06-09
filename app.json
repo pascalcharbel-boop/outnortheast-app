@@ -4,8 +4,13 @@
     "slug": "outnortheast",
     "version": "1.0.0",
     "orientation": "portrait",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "splash": { "backgroundColor": "#1A1140" },
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1A1140"
+    },
     "ios": {
       "supportsTablet": true,
       "infoPlist": { "UIBackgroundModes": ["audio"] },
@@ -13,7 +18,11 @@
     },
     "android": {
       "package": "org.outnortheast.app",
-      "permissions": ["FOREGROUND_SERVICE"]
+      "permissions": ["FOREGROUND_SERVICE"],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1A1140"
+      }
     },
     "plugins": ["expo-notifications"]
   }
