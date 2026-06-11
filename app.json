@@ -7,23 +7,38 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
+<<<<<<< Updated upstream
       "image": "./assets/splash.png",
       "resizeMode": "contain",
+=======
+>>>>>>> Stashed changes
       "backgroundColor": "#1A1140"
     },
     "ios": {
       "supportsTablet": true,
-      "infoPlist": { "UIBackgroundModes": ["audio"] },
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      },
       "bundleIdentifier": "org.outnortheast.app"
     },
     "android": {
       "package": "org.outnortheast.app",
+<<<<<<< Updated upstream
       "permissions": ["FOREGROUND_SERVICE"],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#1A1140"
       }
+=======
+      "permissions": [
+        "FOREGROUND_SERVICE"
+      ]
+>>>>>>> Stashed changes
     },
-    "plugins": ["expo-notifications"]
+    "plugins": [
+      "expo-notifications",
+      "expo-font"
+    ]
   }
 }
