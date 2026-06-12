@@ -1,9 +1,9 @@
 import React from 'react';
-import { ScrollView, View, Text, StyleSheet, Linking } from 'react-native';
+import { ScrollView, View, Text, Image, StyleSheet, Linking } from 'react-native';
 import { theme } from '../theme';
-import { Card, Pill, Button, H1, Muted } from '../components/ui';
+import { Card, Button, Pill, H1, Muted } from '../components/ui';
 import { useRadio } from '../components/RadioPlayer';
-import { EVENTS, PROJECTS, LINKS, RADIO } from '../data';
+import { RADIO, EVENTS, PROJECTS, LINKS, CONTACT } from '../data';
 
 export default function HomeScreen({ navigation }) {
   const { playing, loading, toggle } = useRadio();
@@ -11,14 +11,27 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={{ padding: 16 }}>
+      <View style={styles.header}>
+        {/* TODO: drop the real logo file at assets/out-one-logo.png */}
+        <Image
+          source={require('../assets/out-one-logo.png')}
+          style={styles.logo}
+          resizeMode="contain"
+          accessibilityLabel="OUT North East logo"
+        />
+      </View>
+
       <H1>OUT North East</H1>
       <Muted>LGBTQ+ community across Gateshead, Sunderland & South Tyneside.</Muted>
 
       <Card style={{ marginTop: 16, backgroundColor: theme.colors.primaryDark }}>
         <Text style={styles.radioTitle}>{RADIO.name} · {RADIO.fm}</Text>
         <Text style={styles.radioTag}>{RADIO.tagline}</Text>
-        <Button label={loading ? 'Connecting…' : playing ? '⏸ Pause live' : '▶ Listen live'}
-          color={theme.colors.accent} onPress={toggle} />
+        <Button
+          label={loading ? 'Connecting…' : playing ? '❚❚ Pause live' : '▶ Listen live'}
+          color={theme.colors.accent}
+          onPress={toggle}
+        />
       </Card>
 
       <Text style={styles.section}>Today at the ONE Centre</Text>
@@ -33,11 +46,10 @@ export default function HomeScreen({ navigation }) {
 
       <Text style={styles.section}>Quick actions</Text>
       <View style={styles.row}>
-        <Button label="Donate" color={theme.colors.accent}
-          onPress={() => Linking.openURL(LINKS.donate)} />
+        <Button label="Donate" color={theme.colors.accent} onPress={() => Linking.openURL(LINKS.donate)} />
       </View>
-      <Button label="Get directions to the ONE Centre"
-        onPress={() => Linking.openURL(LINKS.directions)} />
+      {/* TODO: confirm LINKS.directions is a precise maps link before relying on this */}
+      <Button label="Get directions to the ONE Centre" onPress={() => Linking.openURL(LINKS.directions)} />
 
       <Text style={styles.section}>Featured project</Text>
       <Card>
@@ -50,9 +62,11 @@ export default function HomeScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: theme.colors.bg },
+  header: { alignItems: 'center', paddingTop: 8, paddingBottom: 4 },
+  logo: { width: 220, height: 90, marginBottom: 8 },
   section: { fontSize: 18, fontWeight: '800', color: theme.colors.text, marginVertical: 12 },
   evTitle: { fontSize: 16, fontWeight: '700', color: theme.colors.text, marginVertical: 4 },
   radioTitle: { color: '#fff', fontWeight: '800', fontSize: 16 },
   radioTag: { color: '#D9CFF2', marginBottom: 6 },
-  row: { },
+  row: {},
 });
