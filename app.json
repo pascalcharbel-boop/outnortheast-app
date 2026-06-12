@@ -7,11 +7,8 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-<<<<<<< Updated upstream
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-=======
->>>>>>> Stashed changes
       "backgroundColor": "#1A1140"
     },
     "ios": {
@@ -25,17 +22,13 @@
     },
     "android": {
       "package": "org.outnortheast.app",
-<<<<<<< Updated upstream
-      "permissions": ["FOREGROUND_SERVICE"],
+      "permissions": [
+        "FOREGROUND_SERVICE"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#1A1140"
       }
-=======
-      "permissions": [
-        "FOREGROUND_SERVICE"
-      ]
->>>>>>> Stashed changes
     },
     "plugins": [
       "expo-notifications",
