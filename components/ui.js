@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
   pillText: { fontSize: 12, fontWeight: '700' },
   btn: { paddingVertical: 14, borderRadius: 12, alignItems: 'center', marginTop: 8 },
   btnText: { color: '#fff', fontWeight: '700', fontSize: 15 },
-  h1: { fontSize: 26, fontWeight: '800', color: theme.colors.text, marginBottom: 6 },
+  h1: { fontSize: 26, fontWeight: '900', color: theme.colors.text, marginBottom: 6,
+    textTransform: 'uppercase', letterSpacing: 0.5 },
   muted: { color: theme.colors.textMuted, fontSize: 14, lineHeight: 20 },
 });

@@ -88,8 +88,7 @@ export const SOCIAL = [
   { id: 'tiktok', label: 'TikTok', icon: 'logo-tiktok', url: 'https://www.tiktok.com/@outnortheast' },
   { id: 'linkedin', label: 'LinkedIn', icon: 'logo-linkedin', url: 'https://www.linkedin.com/company/out-north-east/' },
   { id: 'youtube', label: 'YouTube', icon: 'logo-youtube', url: 'http://www.youtube.com/@OUTNorthEast1' },
-  // Ionicons has no Threads glyph — using a generic icon. Swap for an image if you prefer.
-  { id: 'threads', label: 'Threads', icon: 'at-outline', url: 'https://www.threads.com/@outnortheast' },
+  { id: 'threads', label: 'Threads', icon: 'logo-threads', url: 'https://www.threads.com/@outnortheast' },
 ];
 
 export const CONTACT = {

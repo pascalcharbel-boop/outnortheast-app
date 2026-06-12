@@ -1,14 +1,14 @@
 export const theme = {
   colors: {
     bg: '#FFFFFF',
-    surface: '#F5F3FB',
-    primary: '#6A1B9A',     // pride purple
-    primaryDark: '#1A1140',
-    accent: '#E91E63',
-    text: '#1B1726',
-    textMuted: '#6A6580',
-    border: '#E6E2F0',
-    // rainbow for accents/category pills
+    surface: '#F4F1F8',
+    primary: '#7B4FA6',     // site purple (section blocks, donate banner)
+    primaryDark: '#1C1530', // deep purple-black (header/photo sections)
+    accent: '#5BC2BC',      // site teal (section blocks, highlights)
+    text: '#16161A',
+    textMuted: '#5F5B6E',
+    border: '#E4DEEF',
+    // rainbow for accents/category pills (ONE Centre logo accent)
     rainbow: ['#E40303', '#FF8C00', '#FFED00', '#008026', '#004DFF', '#750787'],
   },
   spacing: (n) => n * 8,
